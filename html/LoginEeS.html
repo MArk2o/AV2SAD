@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<style>
+  body{
+     background-image:url('assets/paredegesso.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .bloco{
+    text-align: center;
+    background: white;
+   
+    width: 50%;
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  img{
+    float:inline-end;
+    opacity: 00.5;
+  }
+  .button {
+        
+        border: solid;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+         display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        
+      }
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title>Tela de Login</title>
+  </head>
+ 
+    
+  <body >
+      
+    <div class="bloco">
+      
+    
+        <form class="conter">
+          <h2>Faça seu Login aki:</h2>
+          <div>
+            <tr>
+              <td>
+              
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Digite o Email Aki"/>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" placeholder="Digite a senha Aki"/>
+             </td>
+             <br>
+            
+        </tr>
+      </div>
+      <div id="button">
+          <br>
+        <a  class="button" onclick='alert("Login Realizado Com Sucesso!")' href="AreaPaciente.html" value="Login">LOGIN</a>
+      </div>  
+        <img src="assets/IMGAL.jpg">
+    </form>
+
+    </div>
+  </body>
+
+</html>
