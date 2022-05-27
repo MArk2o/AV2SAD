@@ -1,0 +1,52 @@
+
+entity Cliente {
+	nome String,
+    cpf String
+}
+entity Funcionario{
+
+ 	nome String required,
+    cpf String,
+    funcao Funcao required,
+    
+}
+enum Funcao{
+	GERENTE,GARCON,COZINHEIRO
+}
+
+entity Pagamento {
+	tipo String,
+    precoUnitario Double,
+    precoTotal BigDecimal,
+    taxadeServico Int
+}
+
+entity Mesa{
+	numero Int required,
+    acentos Int,
+}
+entity Prato {
+	nome String,
+    descricao String,
+    preco Double
+}
+entity Pedido {
+	quantidade Int,
+    dataPedido ZonedDateTime,
+    numeroMesa Int,
+    
+}
+
+
+relationship ManyToMany {
+	Cliente{mesas} to Mesa,
+    Funcionario{pratos} to Prato,
+    Pedido{pratos} to Prato
+}
+
+relationship OneToMany {
+   Cliente{pagamento} to Pagamento,
+   Mesa{pedido} to Pedido,
+   Funcionario{pedido} to Pedido,
+   Funcionario{pagamento} to Pagamento
+ }
